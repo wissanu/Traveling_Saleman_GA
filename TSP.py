@@ -1,4 +1,3 @@
-from random import randint, seed, sample
 from TSP import FN_TSP as ga
 
 # create Cities and Route distance
@@ -9,11 +8,11 @@ distance = [[0, 5, 40, 15],
             [5, 20, 0, 30],
             [30, 25, 20, 0]]
 
-number_generation = 10
+number_generation = 20
 pop_num = 4
 gene_num = len(cities)
 best_chromosome = []
-best_fitness = 999999
+best_fitness = 99999
 
 
 # generation loop main function
@@ -51,3 +50,4 @@ if __name__ == '__main__':
     print("================")
     print("best fitness:", best_fitness)
     print("best chromosome :",best_chromosome)
+    print("route : ",best_chromosome[0],"->",best_chromosome[1],"->",best_chromosome[2],"->",best_chromosome[3],"->",best_chromosome[0])
